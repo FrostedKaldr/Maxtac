@@ -854,7 +854,7 @@ static void render_logo(void) {
 	}
 	};
 	
-    void animation_phase(void) {
+    void animation_phase2(void) {
         if(get_current_wpm() <=IDLE_SPEED){
             current_ncpd_frame = (current_ncpd_frame + 1) % NCPD_FRAMES;
             oled_write_raw_P(samurai[abs((NCPD_FRAMES-1)-current_ncpd_frame)], ANIM_SIZE);
@@ -872,7 +872,7 @@ static void render_logo(void) {
         oled_on();
         if(timer_elapsed32(anim_timer) > ANIM_FRAME_DURATION2) {
             anim_timer = timer_read32();
-            animation_phase();
+            animation_phase2();
         }
         anim_sleep = timer_read32();
     } else {
@@ -881,7 +881,7 @@ static void render_logo(void) {
         } else {
             if(timer_elapsed32(anim_timer) > ANIM_FRAME_DURATION2) {
                 anim_timer = timer_read32();
-                animation_phase();
+                animation_phase2();
             }
         }
     }
