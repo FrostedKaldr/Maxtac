@@ -19,7 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 #define DYNAMIC_KEYMAP_LAYER_COUNT 6
 #pragma once
-#define OLED_TIMEOUT 180000
+#define OLED_TIMEOUT 600000
 
 //#define USE_MATRIX_I2C
 
@@ -35,7 +35,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define TAPPING_TERM 100
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
-
+#define SPLIT_OLED_ENABLE
 
 #ifdef RGBLIGHT_ENABLE
     #undef RGBLED_NUM
